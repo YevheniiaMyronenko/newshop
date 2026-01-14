@@ -2,42 +2,48 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Каталог — Магазин солодощів</title>
+
+  <!-- Основні стилі сайту -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Стилі ТІЛЬКИ для каталогу -->
   <style>
-    /* --- CSS для галереї товарів --- */
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .product-card {
-      background: #fff;
+      background: #ffffff;
       border: 1px solid #eee;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 15px;
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
     .product-card img {
       width: 100%;
-      height: auto;
+      height: 180px;
+      object-fit: cover;
       border-radius: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .product-card h2 {
-      font-size: 1.1rem;
-      margin: 5px 0;
+      font-size: 1rem;
+      margin: 5px 0 8px;
     }
 
     .product-card p {
@@ -46,100 +52,92 @@
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Магазин солодощів</a>
-      <nav class="main-nav">
-        <a href="catalog.html">Каталог</a>
-        <a href="about.html">Про нас</a>
-        <a href="payment_delivery.html">Оплата та доставка</a>
-        <a href="social.html">Соцмережі</a>
-        <a href="contacts.html">Контакти</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h1>Каталог товарів</h1>
-      <p>Виберіть категорію, щоб переглянути товари.</p>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Магазин солодощів</a>
+    <nav class="main-nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="payment_delivery.html">Оплата та доставка</a>
+      <a href="social.html">Соцмережі</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </div>
+</header>
 
-      <div class="filters">
-        <label>Категорія:
-          <select id="categoryFilter">
-            <option value="all">Усі</option>
-          </select>
-        </label>
-        <label>Пошук:
-          <input id="searchInput" placeholder="Пошук за назвою">
-        </label>
+<main class="container">
+  <section class="card">
+    <h1>Каталог товарів</h1>
+    <p>Виберіть солодощі та напишіть нам для уточнення наявності.</p>
+
+    <!-- ГАЛЕРЕЯ ТОВАРІВ -->
+    <div class="products-grid">
+
+      <div class="product-card">
+        <img src="images/lichi.jpg" alt="Желейні 3D цукерки лічі">
+        <h2>Желейні 3D цукерки лічі</h2>
+        <p>Желейні цукерки зі смаком лічі.</p>
       </div>
 
-      <!-- --- Тут починається галерея товарів --- -->
-      <div class="products-grid">
-        <div class="product-card">
-          <img src="images/lichi.jpg" alt="Цукерка Лічі">
-          <h2>Желейні 3Д цукерки лічі</h2>
-          <p>Желейні цукерки зі смаком лічі.</p>
-        </div>
-         <div class="products-grid">
-        <div class="product-card">
-          <img src="images/lichi.jpg" alt="Цукерка Лічі">
-          <h2>Желейні 3Д цукерки виноград</h2>
-          <p>Желейні цукерки зі смаком винограду.</p>
-        </div>
-            <div class="products-grid">
-        <div class="product-card">
-          <img src="images/lichi.jpg" alt="Цукерка Лічі">
-          <h2>Желейні 3Д цукерки зелене манго</h2>
-          <p>Желейні цукерки зі смаком манго.</p>
-        </div>
-        <div class="products-grid">
-        <div class="product-card">
-          <img src="images/lichi.jpg" alt="Цукерка Лічі">
-          <h2>Желейні 3Д цукерки жовте манго</h2>
-          <p>Желейні цукерки зі смаком манго.</p>
-        </div>
-           <div class="products-grid">
-        <div class="product-card">
-          <img src="images/lichi.jpg" alt="Цукерка Лічі">
-          <h2>Желейні 3Д цукерки персик</h2>
-          <p>Желейні цукерки зі смаком персику.</p>
-        </div>
-        <div class="products-grid">
-        <div class="product-card">
-          <img src="images/lichi.jpg" alt="Цукерка Лічі">
-          <h2>Цукерки mini mochi (яблуко)</h2>
-          <p>Цукерки зі смаком яблука.</p>
-        </div>
-        <div class="product-card">
-          <img src="images/neon.jpg" alt="Цукерка Карамель">
-          <h2>Цукерки Карамель неон</h2>
-          <p>Фруктові льодяники. Смаки: чорниця, виноград, полуниця, лимон, апельсин, яблуко.</p>
-        </div>
-        <div class="product-card">
-          <img src="images/fruit.jpg" alt="Цукерка Шоколад">
-          <h2>Фруктові цукерки</h2>
-          <p>Фруктові льодяники. Смаки: кола, апельчин, лимон, виноград, персик, чорниця, полуниця.</p>
-        </div>
-          <div class="product-card">
-          <img src="images/frut.jpg" alt="Цукерка Шоколад">
-          <h2>Фруктові цукерки</h2>
-          <p>Фруктові льодяники. Смаки: лимон, маракуя, персик, чорниця, полуниця, кавун.</p>
-        </div>
-        <!-- Додай ще 47+ товарів за тим же шаблоном -->
+      <div class="product-card">
+        <img src="images/lichi.jpg" alt="Желейні 3D цукерки виноград">
+        <h2>Желейні 3D цукерки виноград</h2>
+        <p>Желейні цукерки зі смаком винограду.</p>
       </div>
-      <!-- --- Кінець галереї --- -->
 
-      <p class="muted">Примітка: зв'яжіться з нами для уточнення наявності. Надішліть нам фото або назву обраного товару у зручний для вас месенджер: Viber, Telegram, Instagram.</p>
-    </section>
-  </main>
+      <div class="product-card">
+        <img src="images/lichi.jpg" alt="Желейні 3D цукерки зелене манго">
+        <h2>Желейні 3D цукерки зелене манго</h2>
+        <p>Желейні цукерки зі смаком манго.</p>
+      </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Магазин солодощів</p>
+      <div class="product-card">
+        <img src="images/lichi.jpg" alt="Желейні 3D цукерки жовте манго">
+        <h2>Желейні 3D цукерки жовте манго</h2>
+        <p>Желейні цукерки зі смаком манго.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/lichi.jpg" alt="Желейні 3D цукерки персик">
+        <h2>Желейні 3D цукерки персик</h2>
+        <p>Желейні цукерки зі смаком персику.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/neon.jpg" alt="Цукерки Карамель неон">
+        <h2>Цукерки Карамель неон</h2>
+        <p>Фруктові льодяники. Смаки: чорниця, виноград, полуниця, лимон, апельсин, яблуко.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/fruit.jpg" alt="Фруктові цукерки">
+        <h2>Фруктові цукерки</h2>
+        <p>Смаки: кола, апельсин, лимон, виноград, персик, чорниця, полуниця.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/frut.jpg" alt="Фруктові цукерки асорті">
+        <h2>Фруктові цукерки асорті</h2>
+        <p>Смаки: лимон, маракуя, персик, чорниця, полуниця, кавун.</p>
+      </div>
+
     </div>
-  </footer>
+
+    <p class="muted" style="margin-top: 25px;">
+      Примітка: для уточнення наявності напишіть нам у Viber, Telegram або Instagram,
+      надіславши фото чи назву товару.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Магазин солодощів</p>
+  </div>
+</footer>
 
 </body>
+</html>
