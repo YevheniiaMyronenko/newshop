@@ -2,26 +2,61 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Магазин солодощів — Головна</title>
+
+  <meta name="description" content="Магазин солодощів — натуральні і смачні ласощі, доставка по Україні.">
+
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Магазин солодощів — натуральні і смачні ласощі, доставка по Україні." />
+
+  <!-- Стилі для hero-блоку -->
+  <style>
+    .hero-sweets {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .hero-image img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .hero-sweets {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">Магазин солодощів</a>
-      <nav class="main-nav">
-        <a href="catalog.html">Каталог</a>
-        <a href="about.html">Про нас</a>
-        <a href="payment_delivery.html">Оплата та доставка</a>
-        <a href="social.html">Соцмережі</a>
-        <a href="contacts.html">Контакти</a>
-      </nav>
-    </div>
-  </header>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Магазин солодощів</a>
+    <nav class="main-nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="payment_delivery.html">Оплата та доставка</a>
+      <a href="social.html">Соцмережі</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </div>
+</header>
 
 <main class="container">
+
+  <!-- HERO -->
   <section class="hero card hero-sweets">
     <div class="hero-content">
       <h1>Солодке життя починається тут</h1>
@@ -34,24 +69,32 @@
       <img src="images/hero.jpg" alt="Солодощі">
     </div>
   </section>
+
+  <!-- ЯК ЗРОБИТИ ЗАМОВЛЕННЯ -->
+  <section class="card how-to-order">
+    <h2>Як зробити замовлення</h2>
+    <ol>
+      <li>Перегляньте асортимент товарів та оберіть те, що вам сподобалось.</li>
+      <li>
+        Звʼяжіться з нами для уточнення наявності. Надішліть фото або назву товару
+        у Viber, Telegram або Instagram (контакти у відповідному розділі).
+      </li>
+      <li>Ми перевіряємо наявність, погоджуємо деталі та оформлюємо замовлення.</li>
+      <li>
+        Відправляємо замовлення в день оформлення або на наступний день.
+        Доставка: Нова пошта, Укрпошта. Можливий самовивіз у м. Київ.
+      </li>
+    </ol>
+  </section>
+
 </main>
 
-    <section class="card how-to-order">
-      <h2>Як зробити замовлення</h2>
-      <ol>
-        <li>Перегляньте асортимент товару, ознайомтесь з усіма товарами на нашому сайті та оберіть, те що вам сподобалось.</li>
-        <li>Звяжіться з нами для уточнення наявності. Надішліть нам фото або назву обраного товару у зручний для вас месенджер: Viber, Telegram, Instagram. Контактну інформацію ви знайдете у розділі "Контакти".</li>
-        <li>Ми перевіряємо наявність товару, погоджуємо всі деталі та оформлюємо ваше замовлення.</li>
-        <li>Відправляємо замовлення в день оформлення, або на наступний день. Відправка замовлень здійснюється: Укрпоштою та Новою поштою. Також можливий самовивіз в м. Києві.</li>
-      </ol>
-       </section>
-  </main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Магазин солодощів — всі права захищені</p>
+  </div>
+</footer>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Магазин солодощів — всі права захищені</p>
-    </div>
-  </footer>
 <script src="script.js"></script>
 </body>
 </html>
