@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    /* ===== КАТАЛОГ ===== */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -49,6 +50,7 @@
       color: #555;
     }
 
+    /* ===== ПОШУК ===== */
     .search-box {
       margin: 20px 0;
     }
@@ -60,10 +62,35 @@
       border-radius: 8px;
       border: 1px solid #ddd;
     }
+
+    /* ===== МОБІЛЬНА ВЕРСІЯ — 2 ТОВАРИ В РЯД ===== */
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .product-card {
+        padding: 10px;
+      }
+
+      .product-card img {
+        height: 140px;
+      }
+
+      .product-card h2 {
+        font-size: 0.9rem;
+      }
+
+      .product-card p {
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+
 
 <header class="site-header">
   <div class="container header-inner">
